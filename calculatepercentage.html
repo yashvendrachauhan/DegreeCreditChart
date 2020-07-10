@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="Css.css">
     <title>Calculate Your Percentage</title>
 </head>
-<body>
+<body><div id="HTMLtoPDF">
     <table class="demo">
         <thead class="thead">
        <tr>
@@ -116,7 +116,11 @@
    </tr>
    <tr>
        <td colspan="2">Summer and Industrial Trainig   </td>
-       <td>10</td>
+       <td><select id= "training">
+            <option value="8">8</option>
+            <option value="10">10</option>
+            </select>
+       </td>
        <td><input type="text" id = "stai1"></td>  
        <td><input type="text" id="rstai1"></td>    
 
@@ -144,20 +148,21 @@
         var rd1 = document.getElementById('jeemains');
         var rd2 = document.getElementById('lateralentry');
         if(rd1.checked == true){
-            alert("You are a student of "+rd1.value +"\n Please select........ \n Semester 1 credit = 23 \n Semester 2 credit = 23");
+            alert("You are a student of "+rd1.value +"\n Please select........ \n Semester 1 credit = 23 \n Semester 2 credit = 23 \n\n Kindly choose 10 in Summer and Industrial Training");
             // alert("Your semester 1 credit is 23Your semester 2 credit is 23");
             // var semcredit1 = parseInt(document.getElementById('semcredit1')).value = 23;
         }
         else if(rd2.checked == true){
-            alert("You are a student of "+rd2.value +"\n Please select........ \n Semester 1 credit = 0 \n Semester 2 credit = 0");
+            alert("You are a student of "+rd2.value +"\n Please select........ \n Semester 1 credit = 0 \n Semester 2 credit = 0 \n\n Kindly choose 8 in Summer and Industrial Training");
         }
     }
    function total(){
        
        var sem1 = parseFloat(document.getElementById('semestercreditvalue1').value);
        var sem2 = parseFloat(document.getElementById('semestercreditvalue2').value);
+       var tr = parseFloat(document.getElementById('training').value);
        
-       var totalCredit = document.getElementById('totalcredit').value = sem1+sem2+150;
+       var totalCredit = document.getElementById('totalcredit').value = sem1+sem2+140+tr;
        var cgpa1 = parseFloat(document.getElementById('sem1').value).toFixed(2);
        var rsem1 = document.getElementById('rsem1').value = sem1*cgpa1;
 
@@ -190,5 +195,6 @@
 
    }
 </script>
+</div>
 </body>
 </html>
