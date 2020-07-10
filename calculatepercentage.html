@@ -15,9 +15,8 @@
        </thead>
        <tbody>
        <tr>
-           <td colspan="3">You are a student of</td>
-           <td colspan="4"><input type="radio" name="status" id="jeemains"/>&nbsp Jee Mains &nbsp&nbsp&nbsp&nbsp
-               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="status" id="lateralentry"/>&nbsp Lateral Entry</td>  
+           <td colspan="2">You are a student of</td>
+           <td colspan="5"><input type="radio" name="status" id="jeemains" value="Jee Mains" onclick="Status()"/>&nbsp Jee Mains &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="status" id="lateralentry" value="Lateral Entry" onclick="Status()">&nbsp Lateral Entry</td>  
        </tr>
 
        <tr class="header">
@@ -141,6 +140,18 @@
    <tbody>
 </table>
 <script>
+    function Status(){
+        var rd1 = document.getElementById('jeemains');
+        var rd2 = document.getElementById('lateralentry');
+        if(rd1.checked == true){
+            alert("You are a student of "+rd1.value +"\n Please select........ \n Semester 1 credit = 23 \n Semester 2 credit = 23");
+            // alert("Your semester 1 credit is 23Your semester 2 credit is 23");
+            // var semcredit1 = parseInt(document.getElementById('semcredit1')).value = 23;
+        }
+        else if(rd2.checked == true){
+            alert("You are a student of "+rd2.value +"\n Please select........ \n Semester 1 credit = 0 \n Semester 2 credit = 0");
+        }
+    }
    function total(){
        
        var sem1 = parseFloat(document.getElementById('semestercreditvalue1').value);
