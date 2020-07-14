@@ -92,8 +92,6 @@
        <td>24</td>
        <td><input type="text" id = "sem6" size="2"></td>  
        <td><input type="text" id="rsem6" size="2"></td> 
-       
-       
    </tr>
    <!-- semester 7 -->
    <tr>
@@ -102,8 +100,6 @@
        <td>22</td>
        <td><input type="text" id = "sem7" size="2"></td>  
        <td><input type="text" id="rsem7" size="2"></td> 
-       
-       
    </tr>
    <!-- semester 8 -->
    <tr>
@@ -112,8 +108,6 @@
        <td>26</td>
        <td><input type="text" id = "sem8" size="2"></td>  
        <td><input type="text" id="rsem8" size="2"></td> 
-       
-       
    </tr>
    <!-- <tr>
        <td colspan="2">Summer and Industrial Trainig   </td>
@@ -133,14 +127,12 @@
        <td colspan="2">Your Total Credit is</td>
        <td><input type="text" id="totalcredit" size="2" style="font-weight: bolder; font-size: medium;"></td>
        <td>Your CGPA is</td>
-       <td><input type="text" id="yourcgpa" size="2" style="font-weight: bolder; font-size: medium;"></td> 
+       <td><input type="text" id="yourcgpa" size="4" style="font-weight: bolder; font-size: medium;"></td> 
    </tr>
    <tr>
        <td colspan="4">Your Percentage is</td>
-       <td><input type="text" id="yourpercentage" size="2" style="font-weight: bolder; font-size: medium;"></td>
-       
+       <td><input type="text" id="yourpercentage" size="4" style="font-weight: bolder; font-size: medium;"></td>   
    </tr>
-
    <tbody>
 </table></center>
 <center style="padding-top: 10px;"><td colspan="3" rowspan="3"><input style="padding: 10px; border-radius: 20%; font-weight: bold;" type="button" value="Download Result" id="btnexport"/></td></center>
@@ -165,9 +157,6 @@
     });
 </script>
 </body>
-
-
-
 <!-- script section -->
 <script>
     function Status(){
@@ -184,47 +173,44 @@
     }
    function total(){
        
-       var sem1 = parseFloat(document.getElementById('semestercreditvalue1').value);
-       var sem2 = parseFloat(document.getElementById('semestercreditvalue2').value);
+        var sem1 = parseFloat(document.getElementById('semestercreditvalue1').value);
+        var sem2 = parseFloat(document.getElementById('semestercreditvalue2').value);
     //    var tr = parseFloat(document.getElementById('training').value);
        
-       var totalCredit = document.getElementById('totalcredit').value = sem1+sem2+140;
-       var cgpa1 = parseFloat(document.getElementById('sem1').value);
-       var rsem1 = document.getElementById('rsem1').value = sem1*cgpa1;
+        var totalCredit = document.getElementById('totalcredit').value = parseFloat(sem1+sem2+140);
 
-       var cgpa2 = parseFloat(document.getElementById('sem2').value);
-       var rsem2 = document.getElementById('rsem2').value = sem2*cgpa2;
+        var cgpa1 = parseFloat(document.getElementById('sem1').value);
+        var rsem1 = document.getElementById('rsem1').value = (sem1*cgpa1).toFixed(2);
 
-       var cgpa3 = parseFloat(document.getElementById('sem3').value);
-       var rsem3 = document.getElementById('rsem3').value = 22*cgpa3;
+        var cgpa2 = parseFloat(document.getElementById('sem2').value);
+        var rsem2 = document.getElementById('rsem2').value = (sem2*cgpa2).toFixed(2);
 
-       var cgpa4 = parseFloat(document.getElementById('sem4').value);
-       var rsem4 = document.getElementById('rsem4').value = 22*cgpa4;
+        var cgpa3 = parseFloat(document.getElementById('sem3').value);
+        var rsem3 = document.getElementById('rsem3').value = (22*cgpa3).toFixed(2);
 
-       var cgpa5 = parseFloat(document.getElementById('sem5').value);
-       var rsem5 = document.getElementById('rsem5').value = 24*cgpa5;
+        var cgpa4 = parseFloat(document.getElementById('sem4').value);
+        var rsem4 = document.getElementById('rsem4').value = (22*cgpa4).toFixed(2);
 
-       var cgpa6 = parseFloat(document.getElementById('sem6').value);
-       var rsem6 = document.getElementById('rsem6').value = 24*cgpa6;
+        var cgpa5 = parseFloat(document.getElementById('sem5').value);
+        var rsem5 = document.getElementById('rsem5').value = (24*cgpa5).toFixed(2);
 
-       var cgpa7 = parseFloat(document.getElementById('sem7').value);
-       var rsem7 = document.getElementById('rsem7').value = 22*cgpa7;
+        var cgpa6 = parseFloat(document.getElementById('sem6').value);
+        var rsem6 = document.getElementById('rsem6').value = (24*cgpa6).toFixed(2);
 
-       var cgpa8 = parseFloat(document.getElementById('sem8').value);
-       var rsem8 = document.getElementById('rsem8').value = 26*cgpa8;
+        var cgpa7 = parseFloat(document.getElementById('sem7').value);
+        var rsem7 = document.getElementById('rsem7').value = (22*cgpa7).toFixed(2);
 
-    //    var stai1 = parseFloat(document.getElementById('stai1').value);
-    //    var rstai1= document.getElementById('rstai1').value = tr*stai1;
+        var cgpa8 = parseFloat(document.getElementById('sem8').value);
+        var rsem8 = document.getElementById('rsem8').value = (26*cgpa8).toFixed(2);
 
-       var youcgpa= document.getElementById('yourcgpa').value = (rsem1+rsem2+rsem3+rsem4+rsem5+rsem6+rsem7+rsem8)/totalCredit;
-       var yourpercentage = document.getElementById('yourpercentage').value = youcgpa*9;
-
+    // var stai1 = parseFloat(document.getElementById('stai1').value);
+    // var rstai1= document.getElementById('rstai1').value = tr*stai1;
+        var yourCGPA = (parseFloat((parseInt(rsem1)+parseInt(rsem2)+parseInt(rsem3)+parseInt(rsem4)+parseInt(rsem5)+parseInt(rsem6)+parseInt(rsem7)+parseInt(rsem8)).toFixed(2)/parseInt(totalCredit))).toFixed(2);
+        var yourcgpa = document.getElementById('yourcgpa').value = yourCGPA;
+        var yourpercentage = document.getElementById('yourpercentage').value = (yourcgpa*9).toFixed(2);
    }
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script text="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 <script src="pdfgenerate.js"></script>
-
-
-
 </html>
