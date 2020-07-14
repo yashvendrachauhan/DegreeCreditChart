@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="Css.css">
     <title>Calculate Your Percentage</title>
 </head>
-<body>
-    <table class="demo">
+<body id="body">
+    <center class="tbody"><table class="demo" id="table">
         <thead class="thead">
        <tr>
        <th colspan="5">Bachelor Degree Credit Chart</th>
        </tr>
        </thead>
        <tbody>
+    <br>
        <tr>
            <td colspan="2">You are a student of</td>
            <td colspan="5"><input type="radio" name="status" id="jeemains" value="Jee Mains" onclick="Status()"/>&nbsp Jee Mains &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="status" id="lateralentry" value="Lateral Entry" onclick="Status()">&nbsp Lateral Entry</td>  
@@ -31,27 +32,27 @@
        <tr>
        <td>1</td>
        <td>Semester 1</td>
-       <td><select id= "semestercreditvalue1">
+       <td><select id= "semestercreditvalue1" style="text-align: center; font-weight: bold;">
            <option value="0">0</option>
            <option value="23">23</option>
            </select>
        </td>
        <!-- <td><input type="text" id="sem1"></td> -->
-       <td><input type="text" id = "sem1"></td>  
-       <td><input type="text" id="rsem1"></td>         
+       <td><input type="text" id = "sem1" size="2"></td>  
+       <td><input type="text" id="rsem1" size="2"></td>         
        
        </tr>
    <!-- semester 2 -->
    <tr>
        <td>2</td>
        <td>Semester 2</td>
-       <td><select id="semestercreditvalue2">
+       <td><select id="semestercreditvalue2"  style="text-align: center; font-weight: bold;">
            <option value="0">0</option>
            <option value="23">23</option>
            </select>
        </td>
-       <td><input type="text" id = "sem2"></td>  
-       <td><input type="text" id="rsem2"></td> 
+       <td><input type="text" id = "sem2" size="2"></td>  
+       <td><input type="text" id="rsem2" size="2"></td> 
        
    </tr>
    <!-- semester 3 -->
@@ -59,8 +60,8 @@
        <td>3</td>
        <td>Semester 3</td>
        <td>22</td>
-       <td><input type="text" id = "sem3"></td>  
-       <td><input type="text" id="rsem3"></td> 
+       <td><input type="text" id = "sem3" size="2"></td>  
+       <td><input type="text" id="rsem3" size="2"></td> 
        
        
    </tr>
@@ -69,8 +70,8 @@
        <td>4</td>
        <td>Semester 4</td>
        <td>22</td>
-       <td><input type="text" id = "sem4"></td>  
-       <td><input type="text" id="rsem4"></td> 
+       <td><input type="text" id = "sem4" size="2"></td>  
+       <td><input type="text" id="rsem4" size="2"></td> 
        
        
    </tr>
@@ -79,8 +80,8 @@
        <td>5</td>
        <td>Semester 5</td>
        <td>24</td>
-       <td><input type="text" id = "sem5"></td>  
-       <td><input type="text" id="rsem5"></td> 
+       <td><input type="text" id = "sem5" size="2"></td>  
+       <td><input type="text" id="rsem5" size="2"></td> 
        
        
    </tr>
@@ -89,8 +90,8 @@
        <td>6</td>
        <td>Semester 6</td>
        <td>24</td>
-       <td><input type="text" id = "sem6"></td>  
-       <td><input type="text" id="rsem6"></td> 
+       <td><input type="text" id = "sem6" size="2"></td>  
+       <td><input type="text" id="rsem6" size="2"></td> 
        
        
    </tr>
@@ -99,8 +100,8 @@
        <td>7</td>
        <td>Semester 7</td>
        <td>22</td>
-       <td><input type="text" id = "sem7"></td>  
-       <td><input type="text" id="rsem7"></td> 
+       <td><input type="text" id = "sem7" size="2"></td>  
+       <td><input type="text" id="rsem7" size="2"></td> 
        
        
    </tr>
@@ -109,8 +110,8 @@
        <td>8</td>
        <td>Semester 8</td>
        <td>26</td>
-       <td><input type="text" id = "sem8"></td>  
-       <td><input type="text" id="rsem8"></td> 
+       <td><input type="text" id = "sem8" size="2"></td>  
+       <td><input type="text" id="rsem8" size="2"></td> 
        
        
    </tr>
@@ -121,55 +122,80 @@
             <option value="10">10</option>
             </select>
        </td>
-       <td><input type="text" id = "stai1"></td>  
-       <td><input type="text" id="rstai1"></td>    
+       <td><input type="text" id = "stai1" size="2"></td>  
+       <td><input type="text" id="rstai1" size="2"></td>    
 
-   </tr>  -->
+   </tr> -->
    <tr>
        <td colspan="5"> <button class="button" onclick="total();">Submit</button></td>
    </tr>
    <tr>
        <td colspan="2">Your Total Credit is</td>
-       <td><input type="text" id="totalcredit"></td>
+       <td><input type="text" id="totalcredit" size="2" style="font-weight: bolder; font-size: medium;"></td>
+       <td>Your CGPA is</td>
+       <td><input type="text" id="yourcgpa" size="2" style="font-weight: bolder; font-size: medium;"></td> 
    </tr>
    <tr>
-       <td colspan="2">Your CGPA is</td>
-       <td><input type="text" id="yourcgpa"></td>
-   </tr>
-   <tr>
-       <td colspan="2">Your Percentage is</td>
-       <td><input type="text" id="yourpercentage"></td>
+       <td colspan="4">Your Percentage is</td>
+       <td><input type="text" id="yourpercentage" size="2" style="font-weight: bolder; font-size: medium;"></td>
+       
    </tr>
 
    <tbody>
-</table>
+</table></center>
+<center style="padding-top: 10px;"><td colspan="3" rowspan="3"><input style="padding: 10px; border-radius: 20%; font-weight: bold;" type="button" value="Download Result" id="btnexport"/></td></center>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+    $("body").on("click", "#btnexport", function () {
+        html2canvas($('#table')[0], {
+            onrendered: function (canvas) {
+                var data = canvas.toDataURL();
+                var docDefinition = {
+                    content: [{
+                        image: data,
+                        width: 500
+                    }]
+                };
+                pdfMake.createPdf(docDefinition).download("Result.pdf");
+            }
+        });
+    });
+</script>
+</body>
+
+
+
+<!-- script section -->
 <script>
     function Status(){
         var rd1 = document.getElementById('jeemains');
         var rd2 = document.getElementById('lateralentry');
         if(rd1.checked == true){
-            alert("You are a student of "+rd1.value +"\n Please select........ \n Semester 1 credit = 23 \n Semester 2 credit = 23 \n\n Kindly choose 10 in Summer and Industrial Training");
+            alert("You are a student of "+rd1.value +"\n Please select........ \n Semester 1 credit = 23 \n Semester 2 credit = 23");
             // alert("Your semester 1 credit is 23Your semester 2 credit is 23");
             // var semcredit1 = parseInt(document.getElementById('semcredit1')).value = 23;
         }
         else if(rd2.checked == true){
-            alert("You are a student of "+rd2.value +"\n Please select........ \n Semester 1 credit = 0 \n Semester 2 credit = 0 \n\n Kindly choose 8 in Summer and Industrial Training");
+            alert("You are a student of "+rd2.value +"\n Please select........ \n Semester 1 credit = 0 \n Semester 2 credit = 0");
         }
     }
    function total(){
        
        var sem1 = parseFloat(document.getElementById('semestercreditvalue1').value);
        var sem2 = parseFloat(document.getElementById('semestercreditvalue2').value);
-       var tr = parseFloat(document.getElementById('training').value);
+    //    var tr = parseFloat(document.getElementById('training').value);
        
-       var totalCredit = document.getElementById('totalcredit').value = sem1+sem2+140+tr;
-       var cgpa1 = parseFloat(document.getElementById('sem1').value).toFixed(2);
+       var totalCredit = document.getElementById('totalcredit').value = sem1+sem2+140;
+       var cgpa1 = parseFloat(document.getElementById('sem1').value);
        var rsem1 = document.getElementById('rsem1').value = sem1*cgpa1;
 
-       var cgpa2 = parseFloat(document.getElementById('sem2').value).toFixed(2);
+       var cgpa2 = parseFloat(document.getElementById('sem2').value);
        var rsem2 = document.getElementById('rsem2').value = sem2*cgpa2;
 
-       var cgpa3 = parseFloat(document.getElementById('sem3').value).toFixed(2);
+       var cgpa3 = parseFloat(document.getElementById('sem3').value);
        var rsem3 = document.getElementById('rsem3').value = 22*cgpa3;
 
        var cgpa4 = parseFloat(document.getElementById('sem4').value);
@@ -187,13 +213,18 @@
        var cgpa8 = parseFloat(document.getElementById('sem8').value);
        var rsem8 = document.getElementById('rsem8').value = 26*cgpa8;
 
-       var stai1 = parseFloat(document.getElementById('stai1').value);
-       var rstai1= document.getElementById('rstai1').value = tr*stai1;
+    //    var stai1 = parseFloat(document.getElementById('stai1').value);
+    //    var rstai1= document.getElementById('rstai1').value = tr*stai1;
 
-       var youcgpa= document.getElementById('yourcgpa').value = (rsem1+rsem2+rsem3+rsem4+rsem5+rsem6+rsem7+rsem8+rstai1)/totalCredit;
+       var youcgpa= document.getElementById('yourcgpa').value = (rsem1+rsem2+rsem3+rsem4+rsem5+rsem6+rsem7+rsem8)/totalCredit;
        var yourpercentage = document.getElementById('yourpercentage').value = youcgpa*9;
 
    }
 </script>
-</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script text="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="pdfgenerate.js"></script>
+
+
+
 </html>
